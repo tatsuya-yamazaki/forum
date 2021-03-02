@@ -1,14 +1,21 @@
 import React from 'react';
-import './App.css';
-import { Button, CssBaseline } from '@material-ui/core';
+import { Button, CssBaseline, createMuiTheme, ThemeProvider } from '@material-ui/core';
 import { Top } from './Top';
 
 function App() {
+	const theme = createMuiTheme({
+		palette: {
+			type: "dark",
+		},
+	});
+
 	return (
-		<div className="App">
-			<CssBaseline />
-			<Top />
-			</div>
+		<div>
+			<ThemeProvider theme={theme}>
+				<CssBaseline />
+				<Top />
+			</ThemeProvider>
+		</div>
 	);
 }
 

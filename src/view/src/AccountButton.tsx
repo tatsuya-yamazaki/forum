@@ -8,12 +8,12 @@ const useStyles = makeStyles((theme: Theme) =>
 		root: {
 			flexGrow: 1,
 		},
-		UserButton: {
+		AccountButton: {
 		},
 	}),
 );
 
-export function UserButton() {
+export function AccountButton() {
 	const classes = useStyles();
 
 	if ( !isLoggedIn() ) {
@@ -22,7 +22,8 @@ export function UserButton() {
 
 	return(
 		<div>
-			<p>aiueo</p>
-		</div>
+		<p>aiueo</p>
+	</div>
 	);
+
 }
