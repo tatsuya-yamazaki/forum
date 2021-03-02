@@ -1,7 +1,7 @@
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
 import { TitleBlock } from './TitleBlock';
 import { SearchArea } from './SearchArea';
-import { AccountButtons } from './AccountButtons';
+import { AccountBar } from './AccountBar';
 
 export function TopBar() {
 	return(
@@ -9,7 +9,7 @@ export function TopBar() {
 			<Toolbar>
 				<TitleBlock />
 				<SearchArea />
-				<AccountButtons />
+				<AccountBar />
 			</Toolbar>
 		</AppBar>
 	);
