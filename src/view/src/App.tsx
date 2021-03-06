@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, CssBaseline, createMuiTheme, ThemeProvider } from '@material-ui/core';
 import { Top } from './Top';
+import { QuestionList } from './QuestionList';
 
 function App() {
 	const theme = createMuiTheme({
@@ -14,6 +15,7 @@ function App() {
 			<ThemeProvider theme={theme}>
 				<CssBaseline />
 				<Top />
+				<QuestionList />
 			</ThemeProvider>
 		</div>
 	);
