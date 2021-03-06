@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
 			width: '100%',
 			[theme.breakpoints.up('sm')]: {
 				marginLeft: theme.spacing(3),
-				width: 'auto',
+				width: '100%',
 			},
 		},
 		searchIcon: {
@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme: Theme) =>
 		},
 		inputRoot: {
 			color: 'inherit',
+			width: '100%',
 		},
 		inputInput: {
 			padding: theme.spacing(1, 1, 1, 0),
