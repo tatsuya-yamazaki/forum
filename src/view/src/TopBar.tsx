@@ -5,7 +5,7 @@ import { AccountBar } from './AccountBar';
 
 export function TopBar() {
 	return(
-		<AppBar position="sticky">
+		<AppBar position="sticky" color="default">
 			<Toolbar>
 				<TitleBlock />
 				<SearchArea />
