@@ -4,14 +4,15 @@ import { LoginButton } from './LoginButton';
 import { AccountButton } from './AccountButton';
 
 const useStyles = makeStyles((theme: Theme) =>
-	  createStyles({
-		      root: {
-			      flexGrow: 1,
-			          },
-		      AccountBar: {
-			      marginLeft: 'auto',
-			          },
-		    }),
+	createStyles({
+		root: {
+			flexGrow: 1,
+		},
+		AccountBar: {
+			marginLeft: 'auto',
+			display: 'flex',
+		},
+	}),
 );
 
 export function AccountBar() {
