@@ -1,7 +1,9 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Button, CssBaseline, createMuiTheme, ThemeProvider } from '@material-ui/core';
 import { Top } from './Top';
 import { QuestionList } from './QuestionList';
+import { QuestionDetail } from './QuestionDetail';
 
 function App() {
 	const theme = createMuiTheme({
@@ -15,7 +17,12 @@ function App() {
 			<ThemeProvider theme={theme}>
 				<CssBaseline />
 				<Top />
-				<QuestionList />
+				<BrowserRouter>
+					<Switch>
+						<Route path='/' exact children={<QuestionList />} />
+						<Route path='/detail' children={<QuestionDetail />} />
+					</Switch>
+				</BrowserRouter>
 			</ThemeProvider>
 		</div>
 	);
