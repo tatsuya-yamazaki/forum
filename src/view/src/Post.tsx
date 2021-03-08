@@ -1,3 +1,8 @@
+import Typography from '@material-ui/core/Typography';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import { PostContent } from './PostContent';
+import { PostReplyButton } from './PostReplyButton';
 
 export type Post = {
         questionId: number
@@ -12,13 +17,35 @@ interface PostProps {
 }
 
 export function Post(props:PostProps){
+	let respondTo: JSX.Element | null;
+	if ( props.post.respondTo === 0 ) {
+		respondTo = <div></div>;
+	} else {
+		respondTo =
+		<Typography variant="body2" >
+			&gt;&gt;{props.post.respondTo}
+		</Typography>;
+	}
+
 	return (
 		<div>
-			questionId:{props.post.questionId}
-	postId:{props.post.postId}
-	user:{props.post.user}
-	respondTo:{props.post.respondTo}
-	content:{props.post.content}
-</div>
+			<Card variant="outlined" >
+				<CardContent>
+					<Typography variant="body2" >
+						{props.post.postId}:
+					</Typography>
+					<Typography variant="h6" >
+						{props.post.user}
+					</Typography>
+					<div>
+						{respondTo}
+					</div>
+					<PostContent content={props.post.content} />
+					<div style={{ textAlign: "right"  }} >
+						<PostReplyButton />
+					</div>
+				</CardContent>
+			</Card>
+		</div>
 	);
 }
