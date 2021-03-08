@@ -3,7 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 
 
-interface QuestionListPagesProps {
+interface QuestionListPageButtonsProps {
 	questionCount: number
 	currentPage: number
 }
@@ -33,7 +33,7 @@ function PageButton(props: PageButtonProps) {
 	);
 }
 
-export function QuestionListPages(props:QuestionListPagesProps) {
+export function QuestionListPageButtons(props:QuestionListPageButtonsProps) {
 	const maxDisplayPageButtons = 10;
 
 	const questionCount: number = props.questionCount;
