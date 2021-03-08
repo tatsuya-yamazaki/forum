@@ -20,7 +20,7 @@ function App() {
 				<BrowserRouter>
 					<Switch>
 						<Route path='/' exact children={<QuestionList />} />
-						<Route path='/detail' children={<QuestionDetail />} />
+						<Route path='/question/detail/:id' children={<QuestionDetail />} />
 					</Switch>
 				</BrowserRouter>
 			</ThemeProvider>
