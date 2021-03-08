@@ -20,6 +20,7 @@ export function QuestionList() {
 					title={tmpTitle}
 					contentHead={tmpContentHead}
 					tags={tmpTags}
+					closed={true}
 					answerCount={tmpAnswerCount}
 				/>
 				,
@@ -27,6 +28,7 @@ export function QuestionList() {
 					title={tmpTitle2}
 					contentHead={tmpContentHead2}
 					tags={tmpTags2}
+					closed={false}
 					answerCount={tmpAnswerCount2}
 				/>
 	];
