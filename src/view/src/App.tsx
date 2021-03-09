@@ -4,6 +4,8 @@ import { Button, CssBaseline, createMuiTheme, ThemeProvider } from '@material-ui
 import { Top } from './Top';
 import { QuestionList } from './QuestionList';
 import { QuestionDetail } from './QuestionDetail';
+import { PostQuestion } from './PostQuestion';
+import { PostReply } from './PostReply';
 
 function App() {
 	const theme = createMuiTheme({
@@ -20,7 +22,9 @@ function App() {
 				<BrowserRouter>
 					<Switch>
 						<Route path='/' exact children={<QuestionList />} />
-						<Route path='/question/detail/:id' children={<QuestionDetail />} />
+						<Route path='/question/detail/:id' exact children={<QuestionDetail />} />
+						<Route path='/question/post' exact children={<PostQuestion />} />
+						<Route path='/question/post/reply' exact children={<PostReply />} />
 					</Switch>
 				</BrowserRouter>
 			</ThemeProvider>
