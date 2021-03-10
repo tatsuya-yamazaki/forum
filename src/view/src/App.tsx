@@ -6,6 +6,7 @@ import { QuestionList } from './QuestionList';
 import { QuestionDetail } from './QuestionDetail';
 import { PostQuestion } from './PostQuestion';
 import { PostReply } from './PostReply';
+import { ChangeEmailScreen } from './ChangeEmailScreen';
 
 function App() {
 	const theme = createMuiTheme({
@@ -25,6 +26,7 @@ function App() {
 						<Route path='/question/detail/:id' exact children={<QuestionDetail />} />
 						<Route path='/question/post' exact children={<PostQuestion />} />
 						<Route path='/question/post/reply' exact children={<PostReply />} />
+						<Route path='/user/email/change' exact children={<ChangeEmailScreen />} />
 					</Switch>
 				</BrowserRouter>
 			</ThemeProvider>
