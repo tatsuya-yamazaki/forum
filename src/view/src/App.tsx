@@ -11,6 +11,7 @@ import { ChangeEmailScreen } from './ChangeEmailScreen';
 import { ChangePasswordScreen } from './ChangePasswordScreen';
 import { SignupScreen } from './SignupScreen';
 import { UserScreen } from './UserScreen';
+import { PageNotFoundScreen } from './PageNotFoundScreen';
 
 function App() {
 	const theme = createMuiTheme({
@@ -35,6 +36,7 @@ function App() {
 						<Route path='/user/password/change' exact children={<ChangePasswordScreen />} />
 						<Route path='/user/email/change' exact children={<ChangeEmailScreen />} />
 						<Route path='/signup' exact children={<SignupScreen />} />
+						<Route path='*' children={<PageNotFoundScreen />} />
 					</Switch>
 				</BrowserRouter>
 			</ThemeProvider>
