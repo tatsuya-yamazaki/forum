@@ -10,6 +10,7 @@ import { PostReply } from './PostReply';
 import { ChangeEmailScreen } from './ChangeEmailScreen';
 import { ChangePasswordScreen } from './ChangePasswordScreen';
 import { SignupScreen } from './SignupScreen';
+import { UserScreen } from './UserScreen';
 
 function App() {
 	const theme = createMuiTheme({
@@ -30,6 +31,7 @@ function App() {
 						<Route path='/login' exact children={<LoginScreen />} />
 						<Route path='/question/post' exact children={<PostQuestion />} />
 						<Route path='/question/post/reply' exact children={<PostReply />} />
+						<Route path='/user' exact children={<UserScreen />} />
 						<Route path='/user/password/change' exact children={<ChangePasswordScreen />} />
 						<Route path='/user/email/change' exact children={<ChangeEmailScreen />} />
 						<Route path='/signup' exact children={<SignupScreen />} />
