@@ -4,9 +4,12 @@ import { Button, CssBaseline, createMuiTheme, ThemeProvider } from '@material-ui
 import { Top } from './Top';
 import { QuestionList } from './QuestionList';
 import { QuestionDetail } from './QuestionDetail';
+import { LoginScreen } from './LoginScreen';
 import { PostQuestion } from './PostQuestion';
 import { PostReply } from './PostReply';
 import { ChangeEmailScreen } from './ChangeEmailScreen';
+import { ChangePasswordScreen } from './ChangePasswordScreen';
+import { SignupScreen } from './SignupScreen';
 
 function App() {
 	const theme = createMuiTheme({
@@ -24,9 +27,12 @@ function App() {
 					<Switch>
 						<Route path='/' exact children={<QuestionList />} />
 						<Route path='/question/detail/:id' exact children={<QuestionDetail />} />
+						<Route path='/login' exact children={<LoginScreen />} />
 						<Route path='/question/post' exact children={<PostQuestion />} />
 						<Route path='/question/post/reply' exact children={<PostReply />} />
+						<Route path='/user/password/change' exact children={<ChangePasswordScreen />} />
 						<Route path='/user/email/change' exact children={<ChangeEmailScreen />} />
+						<Route path='/signup' exact children={<SignupScreen />} />
 					</Switch>
 				</BrowserRouter>
 			</ThemeProvider>
