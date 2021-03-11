@@ -20,6 +20,6 @@ export function LoginButton() {
 	}
 
 	return(
-		<Button className={classes.Login} variant="outlined" color="default">Login</Button>
+		<Button className={classes.Login} variant="contained" color="default">Login</Button>
 	);
 }
