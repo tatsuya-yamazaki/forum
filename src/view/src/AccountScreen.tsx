@@ -1,6 +1,7 @@
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
+import { Link } from "react-router-dom";
 import { ChangeButton } from './ChangeButton';
 
 export function AccountScreen() {
@@ -24,7 +25,9 @@ export function AccountScreen() {
 									Email:
 								</Typography>
 								<div style={{ marginLeft: "auto" }} >
-									<ChangeButton />
+									<Link to="/user/email/change" style={{ textDecoration: "none" }} >
+										<ChangeButton />
+									</Link>
 								</div>
 							</div>
 						</CardContent >
@@ -37,7 +40,9 @@ export function AccountScreen() {
 									Password
 								</Typography>
 								<div style={{ marginLeft: "auto" }} >
-									<ChangeButton />
+									<Link to="/user/password/change" style={{ textDecoration: "none" }} >
+										<ChangeButton />
+									</Link>
 								</div>
 							</div>
 						</CardContent >

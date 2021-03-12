@@ -1,6 +1,7 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import { isLoggedIn } from './isLoggedIn';
+import { Link } from "react-router-dom";
+import { isLoggedIn } from './Auth';
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -20,6 +21,8 @@ export function LoginButton() {
 	}
 
 	return(
-		<Button className={classes.Login} variant="contained" color="default">Login</Button>
+		<Link to="/login" style={{ textDecoration: "none" }} >
+			<Button className={classes.Login} variant="contained" color="default">Login</Button>
+		</Link>
 	);
 }

@@ -1,3 +1,4 @@
 export function isLoggedIn() {
-	return false;
+	return true;
+	//return false;
 }

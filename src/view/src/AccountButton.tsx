@@ -3,7 +3,7 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import { AccountMenu } from './AccountMenu';
-import { isLoggedIn } from './isLoggedIn';
+import { isLoggedIn } from './Auth';
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({

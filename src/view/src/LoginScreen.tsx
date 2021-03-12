@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import { QuickLoginButton } from './QuickLoginButton';
 import { UserIdInputField } from './UserIdInputField';
 import { PasswordInputField } from './PasswordInputField';
-import { LoginButton } from './LoginButton';
+import { ConfirmButton } from './ConfirmButton';
 
 export function LoginScreen() {
 	return (
@@ -26,7 +26,7 @@ export function LoginScreen() {
 					<UserIdInputField />
 					<PasswordInputField />
 					<div style={{ textAlign: "right" }} >
-						<LoginButton />
+						<ConfirmButton />
 					</div>
 				</CardContent >
 			</Card>
