@@ -1,5 +1,6 @@
-import { QuestionListPageButtons } from './QuestionListPageButtons';
+import { NewQuestion } from './NewQuestion';
 import { QuestionListItem } from './QuestionListItem';
+import { QuestionListPageButtons } from './QuestionListPageButtons';
 
 const tmpQuestionCount: number = 181;
 const tmpCurrentPage: number = 1;
@@ -35,17 +36,16 @@ export function QuestionList() {
 
 	return (
 		<div>
+			<NewQuestion />
 
 			<div>
 				{QuestionListItems}
 			</div>
 
-			<div>
-				<QuestionListPageButtons
-					questionCount={tmpQuestionCount}
-					currentPage={tmpCurrentPage}
-				/>
-			</div>
+			<QuestionListPageButtons
+				questionCount={tmpQuestionCount}
+				currentPage={tmpCurrentPage}
+			/>
 		</div>
 	);
 }
