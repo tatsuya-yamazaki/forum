@@ -4,14 +4,9 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import { Link } from "react-router-dom";
-import { isLoggedIn } from './Auth';
 
 export function AccountButton() {
 	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-
-	if ( !isLoggedIn() ) {
-		return null;
-	}
 
 	const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
 		setAnchorEl(event.currentTarget);
