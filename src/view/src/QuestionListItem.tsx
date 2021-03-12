@@ -2,11 +2,13 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { Link } from "react-router-dom";
 import { QuestionTitle } from './QuestionTitle';
 import { QuestionTags } from './QuestionTags';
 import { QuestionStatus } from './QuestionStatus';
 
 interface QuestionListItemProps {
+	id: number
 	title: string
 	contentHead: string
 	tags: string[]
@@ -20,16 +22,18 @@ export function QuestionListItem(props:QuestionListItemProps) {
 			<Card variant='outlined'>
 				<CardContent>
 
-					<Button
-						style={
-							{
-								textTransform: 'none',
-								justifyContent: 'left',
+					<Link to={`/question/detail/${props.id}`} style={{ textDecoration: "none" }} >
+						<Button
+							style={
+								{
+									textTransform: 'none',
+										justifyContent: 'left',
+								}
 							}
-						}
-						fullWidth={true} >
-						<QuestionTitle title={props.title} />
-					</Button>
+							fullWidth={true} >
+							<QuestionTitle title={props.title} />
+						</Button>
+					</Link>
 
 					<Typography variant="body2">
 						{props.contentHead}...

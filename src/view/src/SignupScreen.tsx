@@ -5,7 +5,7 @@ import { EmailInputField } from './EmailInputField';
 import { CurrentPasswordInputField } from './CurrentPasswordInputField';
 import { PasswordInputField } from './PasswordInputField';
 import { PasswordToConfirmInputField } from './PasswordToConfirmInputField';
-import { SignupButton } from './SignupButton';
+import { ConfirmButton } from './ConfirmButton';
 
 export function SignupScreen() {
 	return (
@@ -17,7 +17,7 @@ export function SignupScreen() {
 					<PasswordInputField />
 					<PasswordToConfirmInputField />
 					<div style={{ textAlign: "right" }} >
-						<SignupButton />
+						<ConfirmButton />
 					</div>
 				</CardContent >
 			</Card>

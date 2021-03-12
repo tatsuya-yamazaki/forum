@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from "react-router-dom";
 import MenuIcon from '@material-ui/icons/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
@@ -19,8 +20,17 @@ export function AccountMenu(props:AccountMenuProps) {
 				open={props.open}
 				onClose={props.onClose}
 			>
-				<MenuItem>MyAccount</MenuItem>
-				<MenuItem>Logout</MenuItem>
+				<Link to="/user" style={{ textDecoration: "none", color: "inherit" }} >
+					<MenuItem >
+						Account
+					</MenuItem>
+				</Link>
+
+				<Link to="/login" style={{ textDecoration: "none", color: "inherit" }} >
+					<MenuItem >
+						Logout
+					</MenuItem>
+				</Link>
 			</Menu>
 		</div>
 	);

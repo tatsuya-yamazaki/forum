@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Button, CssBaseline, createMuiTheme, ThemeProvider } from '@material-ui/core';
+import { AuthRoute } from './AuthRoute';
 import { Top } from './Top';
 import { QuestionList } from './QuestionList';
 import { QuestionDetail } from './QuestionDetail';
@@ -24,17 +25,17 @@ function App() {
 		<div>
 			<ThemeProvider theme={theme}>
 				<CssBaseline />
-				<Top />
 				<BrowserRouter>
+					<Top />
 					<Switch>
 						<Route path='/' exact children={<QuestionList />} />
 						<Route path='/question/detail/:id' exact children={<QuestionDetail />} />
 						<Route path='/login' exact children={<LoginScreen />} />
-						<Route path='/question/post' exact children={<PostQuestion />} />
-						<Route path='/question/post/reply' exact children={<PostReply />} />
-						<Route path='/user' exact children={<UserScreen />} />
-						<Route path='/user/password/change' exact children={<ChangePasswordScreen />} />
-						<Route path='/user/email/change' exact children={<ChangeEmailScreen />} />
+						<AuthRoute path='/question/post' exact children={<PostQuestion />} />
+						<AuthRoute path='/question/post/reply' exact children={<PostReply />} />
+						<AuthRoute path='/user' exact children={<UserScreen />} />
+						<AuthRoute path='/user/password/change' exact children={<ChangePasswordScreen />} />
+						<AuthRoute path='/user/email/change' exact children={<ChangeEmailScreen />} />
 						<Route path='/signup' exact children={<SignupScreen />} />
 						<Route path='*' children={<PageNotFoundScreen />} />
 					</Switch>

@@ -18,6 +18,7 @@ const tmpAnswerCount2: number = 8;
 export function QuestionList() {
 	const QuestionListItems: JSX.Element[] = [
 				<QuestionListItem
+					id={1}
 					title={tmpTitle}
 					contentHead={tmpContentHead}
 					tags={tmpTags}
@@ -26,6 +27,7 @@ export function QuestionList() {
 				/>
 				,
 				<QuestionListItem
+					id={2}
 					title={tmpTitle2}
 					contentHead={tmpContentHead2}
 					tags={tmpTags2}

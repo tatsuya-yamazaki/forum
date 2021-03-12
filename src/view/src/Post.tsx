@@ -1,6 +1,7 @@
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import { Link } from "react-router-dom";
 import { PostContent } from './PostContent';
 import { PostReplyButton } from './PostReplyButton';
 
@@ -41,9 +42,11 @@ export function Post(props:PostProps){
 						{respondTo}
 					</div>
 					<PostContent content={props.post.content} />
-					<div style={{ textAlign: "right"  }} >
-						<PostReplyButton />
-					</div>
+					<Link to="/question/post/reply" style={{ textDecoration: "none" }} >
+						<div style={{ textAlign: "right"  }} >
+							<PostReplyButton />
+						</div>
+					</Link>
 				</CardContent>
 			</Card>
 		</div>
