@@ -1,23 +1,13 @@
 import { useState } from 'react';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import { AccountMenu } from './AccountMenu';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import { Link } from "react-router-dom";
 import { isLoggedIn } from './Auth';
-
-const useStyles = makeStyles((theme: Theme) =>
-	createStyles({
-		root: {
-			flexGrow: 1,
-		},
-		AccountButton: {
-		},
-	}),
-);
 
 export function AccountButton() {
 	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-	const classes = useStyles();
 
 	if ( !isLoggedIn() ) {
 		return null;
@@ -33,15 +23,32 @@ export function AccountButton() {
 
 	return(
 		<div>
-			<IconButton className={classes.AccountButton} onClick={handleClick}>
-				<AccountCircle>
-				</AccountCircle>
-			</IconButton>
-					<AccountMenu
-						anchorEl={anchorEl}
-						open={Boolean(anchorEl)}
-						onClose={handleClose}
-					/>
+			<div>
+				<IconButton onClick={handleClick}>
+					<AccountCircle />
+				</IconButton>
+			</div>
+
+			<div>
+				<Menu
+					anchorEl={anchorEl}
+					open={Boolean(anchorEl)}
+					onClose={handleClose}
+					keepMounted
+				>
+					<Link to="/user" style={{ textDecoration: "none", color: "inherit" }} >
+						<MenuItem onClick={handleClose} >
+							Account
+						</MenuItem>
+					</Link>
+
+					<Link to="/login" style={{ textDecoration: "none", color: "inherit" }} >
+						<MenuItem onClick={handleClose} >
+							Logout
+						</MenuItem>
+					</Link>
+				</Menu>
+			</div>
 		</div>
 	);
 
