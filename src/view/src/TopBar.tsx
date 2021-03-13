@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Toolbar } from '@material-ui/core';
 import { TitleBlock } from './TitleBlock';
 import { SearchArea } from './SearchArea';
 import { AccountBar } from './AccountBar';

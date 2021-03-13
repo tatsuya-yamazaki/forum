@@ -13,11 +13,11 @@ export type Post = {
         content: string
 }
 
-interface PostProps {
+interface PostBlockProps {
 	post: Post
 }
 
-export function Post(props:PostProps){
+export function PostBlock(props:PostBlockProps){
 	let respondTo: JSX.Element | null;
 	if ( props.post.respondTo === 0 ) {
 		respondTo = <div></div>;

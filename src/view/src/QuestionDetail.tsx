@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
-import { Question } from './Question';
-import { Post } from './Post';
+import { Question, QuestionBlock } from './QuestionBlock';
+import { Post, PostBlock } from './PostBlock';
 
 interface Params {
 	id: string
@@ -17,7 +17,7 @@ export function QuestionDetail () {
 	for ( let post of posts ) {
 		postComponents.push(
 			<div>
-				<Post
+				<PostBlock
 					post={post}
 				/>
 			</div>
@@ -26,7 +26,7 @@ export function QuestionDetail () {
 
 	return (
 		<div>
-			<Question question={question} />
+			<QuestionBlock question={question} />
 			{postComponents}
 		</div>
 	);
