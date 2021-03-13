@@ -12,11 +12,11 @@ export type Question = {
         closed: boolean
 }
 
-interface QuestionProps {
+interface QuestionBlockProps {
 	question: Question
 }
 
-export function Question (props:QuestionProps) {
+export function QuestionBlock (props:QuestionBlockProps) {
 	return (
 		<div>
 			<Card>

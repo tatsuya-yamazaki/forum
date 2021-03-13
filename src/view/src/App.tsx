@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Button, CssBaseline, createMuiTheme, ThemeProvider } from '@material-ui/core';
+import { CssBaseline, createMuiTheme, ThemeProvider } from '@material-ui/core';
 import { AuthRoute } from './AuthRoute';
 import { Top } from './Top';
 import { QuestionList } from './QuestionList';
